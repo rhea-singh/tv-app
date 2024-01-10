@@ -1,18 +1,7 @@
 import { ReactNode } from "react";
 
-export type episodeType = {
-  id: number;
-  url: string;
-  name: string;
-  season: number;
-  number: number;
-  rating: ratingType;
-  image: imageType;
-  summary: ReactNode;
-};
-
 type embeddedType = {
-  episodes: Array<episodeType>
+  episodes: Array<episodeType>;
 };
 
 type ratingType = {
@@ -35,5 +24,5 @@ export type movieType = {
   image: imageType;
   runtime: number;
   summary: ReactNode;
-  _embedded? : embeddedType;
+  _embedded?: embeddedType;
 };

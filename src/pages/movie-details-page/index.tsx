@@ -11,11 +11,11 @@ import {
   EpisodeCarousel,
 } from "./styled";
 import useFetch from "../../utils/hooks/useFetch";
-import { API, defaultShowValue } from "../../utils/constants";
+import { API, defaultShowValue, RoutePath } from "../../utils/constants";
 import { Skeleton } from "../../components/layouts/Skeleton";
 import starIcon from "../../assets/icons/star-rate.svg";
 import { NotFound } from "../page-not-found";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Card } from "../../components/layouts/Card";
 
 interface DynamicHTMLComponentProps {
@@ -27,6 +27,7 @@ const DynamicHTMLComponent = ({ htmlString }: DynamicHTMLComponentProps) => {
 };
 
 export const MovieOverviewPage = () => {
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
   const {
@@ -91,7 +92,11 @@ export const MovieOverviewPage = () => {
                     <Card
                       key={key}
                       episode={episode}
-                      // onClick={() => console.log('card was clicked')}
+                      onClick={() =>
+                        navigate(
+                          `${window.location.pathname}/episode/${episode.id}`
+                        )
+                      }
                     />
                   );
                 })}

@@ -3,13 +3,31 @@ export const STAGING_ENDPOINT = "http://api.tvmaze.com";
 export const API = {
   getShowUrl: "/singlesearch/shows?q=",
   embedEpisodes: "&embed=episodes",
-  getEpisodeUrl: "/shows/:id/episodebynumber?season=:season&number=",
+  getEpisodeUrl: "/episodes/",
 };
 
 export const enum RoutePath {
   ShowOverviewPath = "/shows/",
   EpisodeDetailsPath = "/shows/:id/episode/:episodeId",
 }
+
+export const defaultEpisodeValue = {
+  id: 0,
+  season: 0,
+  airtime: 0,
+  url: "",
+  name: "",
+  airdate: "",
+  number: 0,
+  image: {
+    medium: "",
+    original: "",
+  },
+  rating: {
+    average: 0,
+  },
+  summary: "",
+};
 
 export const defaultShowValue = {
   id: 0,
@@ -28,6 +46,7 @@ export const defaultShowValue = {
   },
   summary: "",
   _embedded: {
-    episodes: [],
+    episodes: [defaultEpisodeValue],
   },
 };
+
