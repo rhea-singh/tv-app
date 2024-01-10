@@ -22,6 +22,8 @@ export const theme: ThemeTypes = {
       bold: "600",
     },
     size: {
+      font128: "8rem",
+      font80: "5rem",
       font64: "4rem",
       font40: "2.5rem",
       font32: "2rem",

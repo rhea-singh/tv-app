@@ -9,6 +9,8 @@ export interface ThemeTypes {
       bold: string;
     };
     size: {
+      font128: string;
+      font80: string;
       font64: string;
       font40: string;
       font32: string;

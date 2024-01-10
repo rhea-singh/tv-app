@@ -13,10 +13,20 @@ export const NotFoundPageContainer = styled.main`
 `;
 
 export const NotFoundMessage = styled.h2`
-  order: 1;
   text-align: center;
-  color: ${({ theme }) => theme.colors.typography.main};
-  font-size: ${({ theme }) => theme.typography.size.font80};
+  color: ${({ theme }) => theme.colors.typography.dark};
+  font-size: ${({ theme }) => theme.typography.size.font64};
+  font-weight: ${({ theme }) => theme.typography.weight.medium};
+
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-bottom: 16px;
+  }
+`;
+
+export const NotFoundTitle = styled.h1`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.typography.dark};
+  font-size: ${({ theme }) => theme.typography.size.font128};
   font-weight: ${({ theme }) => theme.typography.weight.semibold};
 
   @media ${({ theme }) => theme.media.desktop} {

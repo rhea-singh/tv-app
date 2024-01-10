@@ -1,10 +1,14 @@
-import { NotFoundMessage, NotFoundPageContainer } from "./styled";
+import {
+  NotFoundMessage,
+  NotFoundPageContainer,
+  NotFoundTitle,
+} from "./styled";
 
 export const NotFound = () => {
   return (
     <NotFoundPageContainer>
-      <NotFoundMessage>404</NotFoundMessage>
-      <NotFoundMessage>Page Not Found</NotFoundMessage>
+      <NotFoundMessage>Uh..oh! Page Not Found</NotFoundMessage>
+      <NotFoundTitle>404</NotFoundTitle>
     </NotFoundPageContainer>
   );
 };

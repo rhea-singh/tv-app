@@ -138,7 +138,6 @@ export const EpisodeCarousel = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   overflow-x: auto;
-  gap: 24px;
   padding-bottom: 16px;
   font-size: ${({ theme }) => theme.typography.size.font20};
 
